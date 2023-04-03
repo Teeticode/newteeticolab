@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.vendor_404{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/images/404.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.vendor_404 p{
+    color: grey;
+    font-weight: 700;
+}
+.loader_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 100vw;
+    height: 100vh;
+}
+.header_avatar{
+    
+}
+@media screen and (min-width:996px) {
+    .header_avatar{
+        display: none;
+    }
+}

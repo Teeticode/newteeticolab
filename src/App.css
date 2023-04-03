@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Cormfota';
+  src: url('./assets/fonts/Comfortaa-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'NerkoOne';
+  src: url('./assets/fonts/NerkoOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+span{
+  cursor: pointer !important;
+}
+:root{
+  --header-height:3rem;
+
+  /** COLORS **/
+  --lightgray:'lightgray';
+  --hue:0;
+  --sat:0%;
+  --title-color: var(--color-white);
+  --title-color-dark: var(--lightgray);
+  --text-color:var(--color-white);
+  --body-color:#1f1f38;
+  --container-color:#2c2c6c;
+  --color-light: rgba(255,255,255,0.6);
+  --color-primary:#4db5ff;
+  --color-primary-variant: var(--container-color);
+  --color-bg: var(--body-color);
+  --color-bg-variant: var(--container-color);
+  --color-white:#fff;
+  --dash-primary:#036ea8;
+  --container-width-lg:75%;
+  --container-width-md:86%;
+  --container-width-ms: 90%;
+  /**** FONT AND TYPOGRAPHY***/
+  --body-font:'Montserrat', sans-serif;
+
+  --transition: all 400ms ease;
+  /**** FONT SIZE ****/
+  --big-font-size:3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /***** FONT WEIGHT *****/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold:600;
+
+  /***** MARGINS *****/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5:2.5rem;
+  --mb-3:3rem;
+
+
+  /*** Z-INDEX ***/
+  --z-tooltip:10;
+  --z-fixed:100;
+  --z-modal:1000;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.button{
+  background: var(--dash-primary)!important;
+}
+/*** RESPONSIVE TYPOGRAPHY ***/
+.dark{
+  --body-color:white;
+  --container-color:white;
+  --color-light: #1f1f38;
+  --title-color: black;
+  --title-color-dark: #333;
+  --text-color:var(--color-light);
+}
+@media screen and(max-width:992px) {
+  :root{
+    /**** FONT SIZE ****/
+    --big-font-size:2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+/*** BASE ***/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none!important;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+body,
+button,
+input,
+textarea{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+body{
+  background-color: var(--body-color)!important;
+  font-family: var(--body-font);
+  color: var(--text-color)!important;
+  line-height: 1.7;
+  
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  background-size: contain!important;
+  font-weight: 600!important;
+}
+h1, h2, h3,h4,h5{
+  font-family: var(--body-font);
+  color: var(--title-color);
+  font-weight: 500;
+}
+h1{
+  font-size: 2.5rem;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none!important;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+a:hover{
+  color: var(--color-white);
+}
+.btn-vendor{
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary)!important;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary)!important;
+  transition: var(--transition);
+}
+.btn-vendor:hover{
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+.btn-primary{
+  background: var(--color-primary);
+  color: var(--color-bg)!important;
+}
+img{
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+i{
+  color: var(--color-light) !important;
+}
+/*** REUSABLE CSS CLASSES ***/
+.section-vendor{
+  height: 100%;
+  padding: 0.6rem;
+  width: 100%;
+}
+.section{
+  margin-top: 0px !important;
+  padding: 6rem 0 2rem;
+}
+.section-vendor{
+    margin-top: 8rem;
+}
+.section-vendor > h2,
+.section-vendor >h5{
+  text-align: center;
+  color: var(--lightgray);
+}
+.section-vendor > h2{
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+.text-light{
+  color: var(--color-light);
+}
+
+.section__title{
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+.section__subtitle{
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+.section__title, 
+.section__subtitle{
+  text-align: center;
+}
+
+/*** LAYOUT ***/
+.container{
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-vendor{
+  width: 100%!important;
+
+}
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+
+/*** BUTTONS ***/
+.button{
+  display: inline-block;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+  transition: .3s ease-in;
+}
+.button:hover{
+  background-color: var(--title-color-dark);
+  color: #fff;
+}
+.button__icon{
+  margin-left: var(--mb-0-5);
+}
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+}
+/*** BREAKPOINTS ***/
+@media screen and (max-width:1024px) {
+  .container-vendor{
+    width: var(--container-width-md);
+  }
+  .section-vendor{
+    margin-top: 4rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width:992px) {
+  .container{
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+  
+  .button{
+    padding: 1rem 1.75rem;
+  }
+  .button__icon{
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and(max-width:768px) {
+    body{
+      margin: 0 0 var(--header-height) 0;
+    }
+    .section{
+      padding: 2rem 0 4rem;
+    }
+    .section__subtitle{
+      margin-bottom: var(--mb-3);
+    }
+    
+}
+@media screen and (max-width:600px) {
+  .container-vendor{
+    width: var(--container-width-ms);
+  }
+  .section-vendor > h2{
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width:350px) {
+  :root{
+    --big-font-size:2.25rem;
+  }
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  
+}
+@media screen and (max-width:326px) {
+  .section-vendor{
+    width: 100% !important;
+  }
+
+}

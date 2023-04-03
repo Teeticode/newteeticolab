@@ -1,0 +1,54 @@
+
+.form-content{
+    
+    border-radius: 6px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-content .field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.field input{
+    height: 100%;
+    width: 100%!important;
+    border: 0.7px solid lightgrey;
+    border-radius: 10px;
+    padding: 25px;
+    outline: none;
+    font-weight: 500;
+}
+.form-content button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%!important;
+    margin-top: 20px;
+}   
+.form-link{
+    text-align: center;
+    margin-top: 20px;
+}
+.forgot-password,
+.form-link small span{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #0171d3;
+}
+.view-psd{
+    font-size: 22px;
+    color: #8b8b8b;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 15px;
+    top: 50%;
+    cursor: pointer;
+    padding: 5px;
+}
